@@ -1,9 +1,7 @@
-# ATTENTION Skip Steps 36 - 49
-
 # 100-Specs
 There are 100 test Specs in this exercise when you first visit the page you will see failing tests, your job is to write code that will satisfy the tests requirements.
 
-# Work Flow
+## Work Flow
 Write code that will make each test pass one at a time. When an entire code block passes, commit your changes to Git.
 
 -----
@@ -26,30 +24,19 @@ Write code that will make each test pass one at a time. When an entire code bloc
 -----
 
 
-# Getting Started
-After you have `forked` this repo to your github account and have it `cloned` into your `DevLeague/` directory on your computer, navigate into your project, e.g. 
+## Getting Started
+1. Fork this repository and clone it from your personal GitHub Account
+1. In the Terminal, navigate to the newly created folder for this repository
+1. Your work will be done in the file: `public/js/class-definitions.js`
+1. Install dependencies by running the command: `npm install`
+1. [Install LiveReload Chrome plugin](http://tinyurl.com/chrome-livereload)
+1. Run your test with the command: `npm test`
+1. Open your files in your Editor/IDE of choice.
+1. To run the server, run the command: `gulp`
+1. There are 100 broken tests, fix them!
 
-### Install LiveReload Chrome plugin
-[http://tinyurl.com/chrome-livereload](http://tinyurl.com/chrome-livereload)
+### What is LiveReload?!
+*LiveReload* saves us sometime by detecting when a file changes in our project and automatically refreshes the brower for us!
 
-LiveReload saves us sometime by detecting when a file changes in our project and automatically refreshes the brower for us!
-
-### Install Package Dependencies from NPM
-Run this command in your Terminal to install the packages that are needed to run this exercise.
-
-    npm install
-
-### Open your files in Sublime Text
-Run this command in your Terminal.
-
-    subl .
-
-
-### Starting your server through Gulp
-Run this command in your Terminal. Gulp starts our server and open up our webbrowser. Convenience, Ho!
-
-    gulp
-
-
-# Extra Tips
+## Extra Tips
 Since we have LiveReload running we don't have to manually refresh our browser anymore. One tip is to have your browser take up one-half of your screen vertically and then have your Text Editor take up the otehr half. As you make changes and save your progress you'll see the browser update itself. Immediate feedback feels gooooood.
