@@ -33,7 +33,7 @@ Write code that will make each test pass one at a time. When an entire code bloc
 1. Run your test with the command: `npm test`
 1. Open your files in your Editor/IDE of choice.
 1. To run the server, run the command: `gulp`
-1. There are 100 broken tests, fix them!
+1. There are 245 broken tests, fix them!
 
 ### What is LiveReload?!
 *LiveReload* saves us sometime by detecting when a file changes in our project and automatically refreshes the brower for us!
