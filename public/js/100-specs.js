@@ -386,7 +386,7 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("'twoStory' should be a House.",function() {
 			js.expect.E.expect(twoStory).to.be.a(House);
 		});
-		js.mocha.M.it("should have one story.",function() {
+		js.mocha.M.it("should have two story.",function() {
 			js.expect.E.expect(twoStory.stories).to.equal(2);
 		});
 	}
@@ -463,7 +463,7 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("'hexagon' should be a Shape.",function() {
 			js.expect.E.expect(hexagon).to.be.a(Shape);
 		});
-		js.mocha.M.it("sides should be a 4.",function() {
+		js.mocha.M.it("sides should be a 6.",function() {
 			js.expect.E.expect(hexagon.sides).to.equal(6);
 		});
 	}
