@@ -291,7 +291,7 @@ class HundredSpecs
       var distros = ["Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieber Linux"];
       for (i in 0...distros.length) {
         E.expect( untyped(linuxFlavors) ).to.contain(distros[i]);
-      }      
+      }
     });
   }
 
@@ -1156,7 +1156,7 @@ class HundredSpecs
     M.it("'gingerbread' should be a Cookie.", function() {
       E.expect(untyped(gingerbread)).to.be.a(untyped(Cookie));
     });
-    M.it("should have chocolate flavor.", function() {
+    M.it("should have gingerbread flavor.", function() {
       E.expect(untyped(gingerbread.flavor)).to.equal("gingerbread");
     });
   }

@@ -354,7 +354,7 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("'gingerbread' should be a Cookie.",function() {
 			js.expect.E.expect(gingerbread).to.be.a(Cookie);
 		});
-		js.mocha.M.it("should have chocolate flavor.",function() {
+		js.mocha.M.it("should have gingerbread flavor.",function() {
 			js.expect.E.expect(gingerbread.flavor).to.equal("gingerbread");
 		});
 	}
