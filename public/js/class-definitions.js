@@ -377,7 +377,7 @@
 
 /* Step 30
  *
- * Define a class named "Pen" with a property for
+ * Define an ES5 class named "Pen" with a property for
  * color and a class method named "write" that takes
  * a message string as a parameter and returns the
  * string back with the pen's color added to the
@@ -399,14 +399,14 @@
 
 /* Step 31
  *
- * Define a class named "Garden" with a property for
+ * Define an ES5 class named "Garden" with a property for
  * the number of plants and whether it was recently
  * watered.
  *
  * Define a class method named "water" which
  * sets the recently watered property to true
  *
- * Defined a class method named "grow" which adds a plant to
+ * Define class method named "grow" which adds a plant to
  * the garden if it was recently watered and exhausts the water.
  * If this method is called and the 'isWatered' property is
  * false, it should return false;
@@ -427,7 +427,7 @@
 
 /* Step 32
  *
- * Define a class named "SolarSystem" with a property
+ * Define an ES5 class named "SolarSystem" with a property
  * "planets" that is initialized as an empty array. Add
  * a method "addPlanet" that adds a planet to the list
  * and a method "removePlanet" that removes a planet.
@@ -445,7 +445,7 @@
 
 /* Step 33
  *
- * Define a class named "PrincessLeia" that is a subclass of "Person"
+ * Define an ES5 class named "PrincessLeia" that is a subclass of "Person"
  * with properties "name," "money," "age," "gender," and
  * "isInTrouble"(initialized as null)
  *
@@ -479,7 +479,7 @@
 
 /* Step 34
  *
- * Define a class named "Stapler" with properties "color"
+ * Define an ES5 class named "Stapler" with properties "color"
  * and "maxPapers". Add a method "staplePapers" that accepts a
  * number of papers as a parameter and returns true if the
  * papers are less than or equal to the papers and false
@@ -498,7 +498,7 @@
 
 /* Step 35
  *
- * Define a class named "Scientist" that extends the Person Class that takes
+ * Define an ES5 class named "Scientist" that extends the Person Class that takes
  * name, money, age, and gender as well as new instance properties
  * "disciplines" and "discoveries" which initializes as empty arrays.
  *
@@ -538,7 +538,7 @@
 
 /* Step 36
  *
- * Define a class named "BankAccount" that has properties
+ * Define an ES5 class named "BankAccount" that has properties
  * "balance" and "owner." Add a method "withdraw" that allows
  * the owner to remove money from the account and add it to
  * their Person object, "deposit" that lets a Person spend
