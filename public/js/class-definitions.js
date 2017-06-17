@@ -158,15 +158,16 @@ var browsers = {
  *
  */
 var rainbow = {
-  colors:{
-  red: "#F0280A",
-  orange: "#FF8800",
-  yellow: "#FFDD00",
-  green: "#51AB0C",
-  blue: "#1593ED",
-  indigo: "#5215ED",
-  violet: "#A915ED"},
-  isDouble:true
+  colors: {
+    red: "#F0280A",
+    orange: "#FF8800",
+    yellow: "#FFDD00",
+    green: "#51AB0C",
+    blue: "#1593ED",
+    indigo: "#5215ED",
+    violet: "#A915ED"
+  },
+  isDouble: true
 }
 
 /* Step 14
@@ -182,7 +183,7 @@ var rainbow = {
  * "Bieber Linux"
  *
  */
-var linuxFlavors=["Gentoo","Fedora","Debian","Slackware","Red Hat", "Bieber Linux"]
+var linuxFlavors = ["Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieber Linux"]
 
 /* Step 15
  *
@@ -196,7 +197,7 @@ var linuxFlavors=["Gentoo","Fedora","Debian","Slackware","Red Hat", "Bieber Linu
  * "cytosine"
  *
  */
-var DNA=["nucleatides","guanine","adenine","thymine","cytosine"]
+var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"]
 
 /* Step 16
  *
@@ -209,11 +210,11 @@ var DNA=["nucleatides","guanine","adenine","thymine","cytosine"]
  * Surface      => 320
  *
  */
-var laptopCosts={
-  MacBook   :1500,
- Alienware :2500,
-HP  :499,
- Surface :320
+var laptopCosts = {
+  MacBook: 1500,
+  Alienware: 2500,
+  HP: 499,
+  Surface: 320
 }
 
 /* Step 17
@@ -230,7 +231,7 @@ HP  :499,
  * "Species"
  *
  */
-
+var livingOrganismClassification=["Kingdom","Phylum","Class","Order","Family","Genus","Species"]
 
 /* Step 18
  *
@@ -244,7 +245,7 @@ HP  :499,
  * "cvs"
  *
  */
-
+var scmList=[ "git","svn","mercurial","bazaar","cvs"]
 
 /* Step 19
  *
@@ -263,7 +264,14 @@ HP  :499,
  *                  "Golden"
  *
  */
-
+var beers= {
+  IPA : "Ale",
+   Lager: "Strong",
+   Heffeweisen: "German",
+   Stout: ["Thick","Dark"],
+ Porter: "Bitter",
+   Ale: [  "Light","Golden"]
+}
 
 /* Step 20
  *
@@ -273,7 +281,9 @@ HP  :499,
  * @return {String}
  *
  */
-
+function sahara_river(){
+  return 'Nile River';
+};
 
 /* Step 21
  *
@@ -285,6 +295,10 @@ HP  :499,
  * @return {Number}
  *
  */
+ function addNumbers (x,y) {
+
+   return x+y;
+ }
 
 
 /* Step 22
@@ -298,8 +312,14 @@ HP  :499,
  * @return {Bool}
  *
  */
-
-
+function installLinux(string) {
+  var lins= linuxFlavors.indexOf(string)
+  if(lins!==-1){
+    return true;
+  }else {
+    return false
+  }
+}
 /* Step 23
  *
  * Define a function named "drink" that takes
@@ -317,7 +337,17 @@ HP  :499,
  * @return {Bool when False, String when True}
  *
  */
+function drink (beer) {
+  if (!("key" in beers)&& typeof beers[beer] === 'string') {
+    return "This "+ beer + " is "+ beers[beer]+"."
+  }else if(beers[beer] instanceof Array){
+      return ("This " + beer + " is " + beers[beer][0] + " and " + beers[beer][1] + ".");
+    }else {
+      return false
+    }
 
+
+}
 
 /* Step 24
  *
@@ -330,7 +360,14 @@ HP  :499,
  * @return {String if true else return false}
  *
  */
+function browseURL(string){
+  if (!("key" in browsers)) {
+    return browsers[string]
+  }else if(!"key" in browsers){
+    return false
+  }
 
+}
 
 /* Step 25
  *
