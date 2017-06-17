@@ -132,13 +132,13 @@ var domains = {
  *   Konqueror  => "konqueror.org"
  *
  */
-var browsers={
-  Chromium:"google.com",
- Safari : "apple.com",
-Opera  : "opera.com",
- Firefox :"mozilla.org",
+var browsers = {
+  Chromium: "google.com",
+  Safari: "apple.com",
+  Opera: "opera.com",
+  Firefox: "mozilla.org",
   Sleipnir: "fenrir-inc.com",
- Konqueror :"konqueror.org"
+  Konqueror: "konqueror.org"
 }
 
 /* Step 13
@@ -157,7 +157,17 @@ Opera  : "opera.com",
  *  isDouble  => true
  *
  */
-
+var rainbow = {
+  colors:{
+  red: "#F0280A",
+  orange: "#FF8800",
+  yellow: "#FFDD00",
+  green: "#51AB0C",
+  blue: "#1593ED",
+  indigo: "#5215ED",
+  violet: "#A915ED"},
+  isDouble:true
+}
 
 /* Step 14
  *
@@ -172,7 +182,7 @@ Opera  : "opera.com",
  * "Bieber Linux"
  *
  */
-
+var linuxFlavors=["Gentoo","Fedora","Debian","Slackware","Red Hat", "Bieber Linux"]
 
 /* Step 15
  *
@@ -186,7 +196,7 @@ Opera  : "opera.com",
  * "cytosine"
  *
  */
-
+var DNA=["nucleatides","guanine","adenine","thymine","cytosine"]
 
 /* Step 16
  *
@@ -199,7 +209,12 @@ Opera  : "opera.com",
  * Surface      => 320
  *
  */
-
+var laptopCosts={
+  MacBook   :1500,
+ Alienware :2500,
+HP  :499,
+ Surface :320
+}
 
 /* Step 17
  *
