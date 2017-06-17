@@ -361,9 +361,9 @@ function drink (beer) {
  *
  */
 function browseURL(string){
-  if (!("key" in browsers)) {
+  if (browsers.hasOwnProperty(string)) {
     return browsers[string]
-  }else if(!"key" in browsers){
+  }else{
     return false
   }
 
@@ -378,7 +378,9 @@ function browseURL(string){
  * @return {String}
  *
  */
-
+function listLivingOrgClass (string) {
+return `<ul><li>${livingOrganismClassification}</li></ul>`
+}
 
 /* Step 26
  *
