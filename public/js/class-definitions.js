@@ -4,7 +4,7 @@
  * then set it's value to null;
  *
  */
-
+var unicorn= null
 
 /* Step 2
  *
@@ -12,7 +12,7 @@
  * then assign it to be the value of "Atari"
  *
  */
-
+var videogame_system= "Atari "
 
 /* Step 3
  *
@@ -20,6 +20,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
+ var sahara_animal= "The Addax"
 
 
 /* Step 4
@@ -29,7 +30,7 @@
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-
+var planets= ["Mercury","Venus","Earth", "Mars","Jupiter","Saturn","Uranus","Neptune"]
 
 /* Step 5
  *
@@ -38,7 +39,7 @@
  * each galilean moon of Jupiter
  *
  */
-
+var galilean_moons=["Io", "Europa", "Ganymede","Callisto"]
 
 /* Step 6 φ
  *
