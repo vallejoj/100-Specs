@@ -976,8 +976,11 @@ function Vehicle(make,model){
  *
  */
 function Shape(sides){
-this.sides=null;
-
+  if (sides>3){
+this.sides=sides;
+}else{
+  this.sides=null;
+}
 }
 
 /**
@@ -989,7 +992,7 @@ this.sides=null;
  */
 function Box(contents, isOpen){
   this.contents=contents;
-  this.isOpen=false;
+  this.isOpen=isOpen;
 }
 
 /**
@@ -999,7 +1002,7 @@ function Box(contents, isOpen){
  * @param {boolean} isOpen Whether the door is opened or closed
  */
 function Door(isOpen){
-  isOpen=false;
+  this.isOpen=isOpen;
 }
 
 /**
@@ -1009,7 +1012,10 @@ function Door(isOpen){
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-
+function Shoe(size, color){
+  this.size=size;
+  this.color=color;
+}
 
 /**
  * Step 56
@@ -1017,7 +1023,9 @@ function Door(isOpen){
  * House class
  * @param {number} stories How many stories tall the house is
  */
-
+function House(stories){
+  this.stories=stories;
+};
 
 /**
  * Step 57
@@ -1025,7 +1033,9 @@ function Door(isOpen){
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-
+function Lightbulb(isOn){
+  this.isOn=isOn;
+}
 
 /**
  * Step 58
@@ -1033,7 +1043,9 @@ function Door(isOpen){
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+function Cookie(flavor){
+  this.flavor=flavor;
+}
 
 /**
  * Step 59
@@ -1041,7 +1053,9 @@ function Door(isOpen){
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+function Meal(foods){
+  this.foods=foods;
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
@@ -1050,44 +1064,45 @@ function Door(isOpen){
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal('Monkey', 'male');
+var nemo= new Animal('Fish', 'male');
+
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic =new Vehicle("Honda","Civic");
+var forte =new Vehicle('KIA',"Forte");
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square =new Shape(4);
+var hexagon =new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox= new Box(new Animal('Cat'), true);
+var christmasPresent= new Box("none", false);
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door(true);
+var bankVault = new Door(false);
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers= new Shoe(7,"red");
+var dressShoes= new Shoe(10,"black");
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory= new House(1);
+var twoStory= new House(2);
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent= new Lightbulb(true);
+var halogen=new Lightbulb(false);
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip= new Cookie('chocolate');
+var gingerbread= new Cookie('gingerbread');
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast= new Meal('cereal and milk');
+var dinner = new Meal('fish and vegetables');
 
 
 /* Steps 81 to 90
