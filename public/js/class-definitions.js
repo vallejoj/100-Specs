@@ -63,7 +63,7 @@ var earths_water_composition = 0.71
  * and assign the value of club_name to "Fight Club"
  *
  */
-var club_name = "Fight Club";
+
 
 
 /* Step 9
@@ -210,12 +210,7 @@ var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"]
  * Surface      => 320
  *
  */
-var laptopCosts = {
-  MacBook: 1500,
-  Alienware: 2500,
-  HP: 499,
-  Surface: 320
-}
+
 
 /* Step 17
  *
@@ -435,8 +430,18 @@ function favoritePlanet (planet) {
  *   earnMoney
  *
  */
-
-
+function Person(name,money,age,gender){
+  this.name=name;
+  this.money=money;
+  this.age= age;
+  this.gender=gender;
+}
+Person.prototype.spendMoney= function(money){
+ this.money-=10
+}
+Person.prototype.earnMoney= function(money){
+ this.money+=10
+}
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
@@ -448,6 +453,21 @@ function favoritePlanet (planet) {
  * @return {String}
  *
  */
+
+ var laptopCosts = {
+   MacBook: 1500,
+   Alienware: 2500,
+   HP: 499,
+   Surface: 320
+ }
+
+ function purchaseLaptop (laptop) {
+   if (laptopCosts.hasOwnProperty(laptop)) {
+     return `${laptopCosts[laptop]}`
+   }else{
+     return -1
+   }
+ }
 
 
 /* Step 29
@@ -461,7 +481,14 @@ function favoritePlanet (planet) {
  * @return {Bool}
  *
  */
-
+ var club_name = "Fight Club";
+function canTalkAbout (club) {
+  if(club===club_name){
+    return false
+  }else{
+    return true
+  }
+}
 
 /* Step 30
  *
@@ -483,7 +510,13 @@ function favoritePlanet (planet) {
  *   write
  *
  */
+function Pen(color){
+  this.color=color;
+}
 
+Pen.prototype.write = function(color) {
+return this.color+": Yar Yar Yar"
+}
 
 /* Step 31
  *
