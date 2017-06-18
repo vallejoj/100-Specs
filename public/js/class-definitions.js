@@ -1209,7 +1209,7 @@ Box.prototype.openBox = function() {
 
 /* Step 85
  *
- * Declare a Door method called openClose that opens the door
+ * Declarxe a Door method called openClose that opens the door
  * if it is already closed, or closes the door if it is already open.
  * Return true if openClose opens the door, false if openClose closes the door.
  *
@@ -1350,7 +1350,7 @@ var polygon= new Shape(1).getType(1);
  *
  */
 var openAClosedBox =new Box("Cat",false).openBox();
-var closeAnOpenBox= new Box("Dog",true).openBox(true);
+var closeAnOpenBox= new Box("Dog",true).openBox();
 
 /* Step 95
  *
@@ -1358,8 +1358,8 @@ var closeAnOpenBox= new Box("Dog",true).openBox(true);
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor= new Door(false).openClose();
+var closeAnOpenDoor= new Door(true).openClose();
 
 
 /* Step 96
@@ -1368,8 +1368,8 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7= new Shoe (7,"red").findShoes();
+var blackShoesSize10= new Shoe (10, "black").findShoes();
 
 
 /* Step 97
@@ -1378,8 +1378,8 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory= new House(5).isATallStory(1);
+var shortStory=new House(2).isATallStory(); ;
 
 
 /* Step 98
@@ -1388,8 +1388,8 @@ var shortStory;
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+var kitchenLightsOn = new Lightbulb(true).flipSwitch("on");
+var porchLightsOff = new Lightbulb(false).flipSwitch();
 
 
 /* Step 99
@@ -1398,8 +1398,8 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns= new Cookie('chocolate').swipedByCookieMonster("Monday");
+var cookieMonsterBlocked= new Cookie('chocolate').swipedByCookieMonster("Saturday");
 
 
 /* Step 100
