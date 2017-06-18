@@ -976,7 +976,7 @@ function Vehicle(make,model){
  *
  */
 function Shape(sides){
-  if (sides>3){
+  if (sides>=3){
 this.sides=sides;
 }else{
   this.sides=null;
@@ -1101,8 +1101,8 @@ var chocolateChip= new Cookie('chocolate');
 var gingerbread= new Cookie('gingerbread');
 
 // Create 2 different meals
-var breakfast= new Meal('cereal and milk');
-var dinner = new Meal('fish and vegetables');
+var breakfast= new Meal(["cereal", "milk"]);
+var dinner = new Meal(['fish', 'vegetables']);
 
 
 /* Steps 81 to 90
@@ -1126,7 +1126,16 @@ var dinner = new Meal('fish and vegetables');
  *       Any other species => "Could not determine if warm-blooded"
  *
  */
+Animal.prototype.isWarmBlooded= function(){
+  if(this.species==="Fish"){
+    return false
+  }if (this.species==="Monkey" || this.species==="Bird") {
+    return true
+  }else{
+    return "Could not determine if warm-blooded";
+  }
 
+}
 
 /* Step 82
  *
@@ -1135,7 +1144,13 @@ var dinner = new Meal('fish and vegetables');
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
-
+Vehicle.prototype.drive= function (streetName) {
+  if (typeof streetName==="string" && streetName!=="") {
+    return "Driving on "+ streetName
+  }else{
+    return "Driving forward"
+  }
+}
 
 /* Step 83
  *
@@ -1154,7 +1169,27 @@ var dinner = new Meal('fish and vegetables');
  * Any other number => "Could not determine type"
  *
  */
-
+Shape.prototype.getType= function(){
+  if(this.sides===3){
+    return "triangle"
+  }if(this.sides===4){
+    return "quadrilateral"
+  }if(this.sides===5){
+    return "pentagon"
+  }if(this.sides===6){
+    return "hexagon"
+  }if(this.sides===7){
+    return "heptagon"
+  }if(this.sides===8){
+    return "octagon"
+  }if(this.sides===9){
+    return "nonagon"
+  }if(this.sides===10){
+    return "decagon"
+  }else{
+    return "Could not determine type"
+  }
+}
 
 /* Step 84
  *
@@ -1164,7 +1199,13 @@ var dinner = new Meal('fish and vegetables');
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+Box.prototype.openBox = function() {
+  if(this.isOpen===false){
+    return this.isOpen=true
+  }else if(this.isOpen===true){
+    return false
+  }
+}
 
 /* Step 85
  *
@@ -1173,7 +1214,13 @@ var dinner = new Meal('fish and vegetables');
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
-
+ Door.prototype.openClose = function() {
+   if(this.isOpen===false){
+     return this.isOpen=true
+   }else if(this.isOpen===true){
+     return this.isOpen=false
+   }
+ }
 
 /* Step 86
  *
@@ -1181,7 +1228,9 @@ var dinner = new Meal('fish and vegetables');
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
-
+Shoe.prototype.findShoes= function(){
+  return "Found "+ this.color + " shoes of size "+ this.size;
+}
 
 /* Step 87
  *
@@ -1191,7 +1240,13 @@ var dinner = new Meal('fish and vegetables');
  * storiesTooTall, return true, else return false.
  *
  */
-
+House.prototype.isATallStory= function(storiesTooTall){
+  if (this.stories>=storiesTooTall) {
+    return true
+  }else{
+    return false
+  }
+}
 
 /* Step 88
  *
@@ -1202,7 +1257,13 @@ var dinner = new Meal('fish and vegetables');
  * Return true if isOn is true, false otherwise.
  *
  */
-
+Lightbulb.prototype.flipSwitch= function(on){
+  if (on==="on") {
+  return this.isOn=true;
+  }else{
+    return false;
+  }
+}
 
 /* Step 89
  *
@@ -1212,7 +1273,13 @@ var dinner = new Meal('fish and vegetables');
  *
  */
 
-
+Cookie.prototype.swipedByCookieMonster= function(dayOfTheWeek){
+  if (this.flavor==="chocolate" && dayOfTheWeek==="Monday") {
+    return true;
+  }else{
+    return false;
+  }
+}
 /* Step 90
  *
  * Declare a Meal method called containsJunkFood that returns true if
@@ -1226,7 +1293,17 @@ var dinner = new Meal('fish and vegetables');
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
-
+Meal.prototype.containsJunkFood= function (){
+  var junkFood=["chips", "soda", "ice cream",
+  "popcorn", "candy"]
+  for (var i = 0; i < junkFood.length; i++) {
+  if (this.foods.indexOf(junkFood[i])!== -1) {
+    return true
+  }else{
+    return false
+  }
+}
+}
 
 /* Steps 91 to 100
  *
@@ -1241,9 +1318,9 @@ var dinner = new Meal('fish and vegetables');
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal= new Animal("Monkey","male").isWarmBlooded();
+var coldBloodedAnimal= new Animal("Fish","male").isWarmBlooded();
+var notWarmOrColdAnimal=new Animal("Porkeypine","male").isWarmBlooded();
 
 
 /* Step 92
@@ -1252,7 +1329,7 @@ var notWarmOrColdAnimal;
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
+var streetDriving= new Vehicle("").drive();
 var forwardDriving;
 
 
