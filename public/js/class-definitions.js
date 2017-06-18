@@ -1329,8 +1329,8 @@ var notWarmOrColdAnimal=new Animal("Porkeypine","male").isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving= new Vehicle("").drive();
-var forwardDriving;
+var streetDriving= new Vehicle("Honda", "Civic").drive("Josh");
+var forwardDriving= new Vehicle("Honda", "Civic").drive("") ;
 
 
 /* Step 93
@@ -1339,8 +1339,8 @@ var forwardDriving;
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var decagon= new Shape(10).getType(10);
+var polygon= new Shape(1).getType(1);
 
 
 /* Step 94
@@ -1349,9 +1349,8 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
-
+var openAClosedBox =new Box("Cat",false).openBox();
+var closeAnOpenBox= new Box("Dog",true).openBox(true);
 
 /* Step 95
  *
