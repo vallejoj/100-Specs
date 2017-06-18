@@ -430,18 +430,7 @@ function favoritePlanet (planet) {
  *   earnMoney
  *
  */
-function Person(name,money,age,gender){
-  this.name=name;
-  this.money=money;
-  this.age= age;
-  this.gender=gender;
-}
-Person.prototype.spendMoney= function(money){
- this.money-=10
-}
-Person.prototype.earnMoney= function(money){
- this.money+=10
-}
+
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
@@ -544,7 +533,25 @@ return this.color+": Yar Yar Yar"
  *   grow
  *
  */
+function Garden(plantsTotal, watered){
+   this.plantsTotal=plantsTotal;
+   this.isWatered=false
+}
+Garden.prototype.water= function() {
+  this.isWatered=true
+}
 
+Garden.prototype.grow= function() {
+  if(this.isWatered===true){
+    return this.plantsTotal++
+
+  }else{
+    return false
+  }
+}
+var garden= new Garden(10, false);
+garden.water();
+garden.grow();
 
 /* Step 32
  *
@@ -562,8 +569,15 @@ return this.color+": Yar Yar Yar"
  *   removePlanet
  *
  */
-
-
+function SolarSystem(planets){
+  this.planets=[];
+}
+SolarSystem.prototype.removePlanet = function() {
+this.planets.pop(planets)
+}
+SolarSystem.prototype.addPlanet = function() {
+  this.planets.push(planets)
+}
 /* Step 33
  *
  * Define an ES5 class named "PrincessLeia" that is a subclass of "Person"
@@ -596,8 +610,48 @@ return this.color+": Yar Yar Yar"
  *   marries
  *
  */
+ function Person(name,money,age,gender){
+   this.name=name;
+   this.money=money;
+   this.age= age;
+   this.gender=gender;
+ }
+ Person.prototype.spendMoney= function(money){
+  this.money-=10
+ }
+ Person.prototype.earnMoney= function(money){
+  this.money+=10
+ }
 
+ function PrincessLeia(name,money,age,gender, isInTrouble) {
+ this.isInTrouble=null;
+   Person.call(this,name,money,age,gender)
+ }
 
+ PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor: Person
+})
+
+PrincessLeia.prototype.shootsGun = function () {
+  return "Leia shoots her gun wildly"
+};
+
+PrincessLeia.prototype.shootsGun = function () {
+  this.isInTrouble=false;
+  return "Leia shoots her gun wildly"
+};
+PrincessLeia.prototype.getsInTrouble = function () {
+  this.isInTrouble=true;
+  return "Help me Obi-wan Kenobi, you're my only hope"
+};
+PrincessLeia.prototype.marries = function (who) {
+  if (who === "Han Solo") {
+    return true
+  }else{
+    return "Gross!"
+  }
+
+};
 /* Step 34
  *
  * Define an ES5 class named "Stapler" with properties "color"
@@ -615,7 +669,18 @@ return this.color+": Yar Yar Yar"
  *   staplePapers
  *
  */
+function Stapler(color, maxPapers){
+  this.color=color;
+  this.maxPapers=maxPapers;
+}
 
+Stapler.prototype.staplePapers = function(numPapers) {
+   if (numPapers<=this.maxPapers) {
+     return true
+   }else{
+     return false
+   }
+}
 
 /* Step 35
  *
@@ -655,8 +720,15 @@ return this.color+": Yar Yar Yar"
  *   addDiscovery
  *
  */
+function Scientist(name,money,age,gender,disciplines,discoveries) {
+this.disciplines=[];
+this.discoveries=[];
+   Person.call(this,name,money,age,gender)
+ }
 
-
+ Scientist.prototype = Object.create(Person.prototype, {
+  constructor: Person
+})
 /* Step 36
  *
  * Define an ES5 class named "BankAccount" that has properties
