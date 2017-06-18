@@ -728,7 +728,34 @@ this.discoveries=[];
 
  Scientist.prototype = Object.create(Person.prototype, {
   constructor: Person
-})
+});
+
+Scientist.prototype.addDiscipline = function (dis) {
+       this.disciplines.push(dis)
+};
+Scientist.prototype.checkDiscipline = function (string) {
+  var checkArr= this.disciplines.indexOf(string)
+    if(checkArr!== -1){
+      return true;
+    }else{
+      return false;
+    }
+
+};
+Scientist.prototype.addDiscovery = function (string) {
+this.discoveries.push(string)
+if (this.discoveries.length===1) {
+      return "I discovered " + this.discoveries[0]+ "."
+}if (this.discoveries.length===2) {
+      return "I discovered " + this.discoveries[0]+" and "+ this.discoveries[1]+"."
+}if (this.discoveries.length===3) {
+      return "I discovered " + this.discoveries[0]+", "+ this.discoveries[1] +", and "+ this.discoveries[2]+"."
+}
+
+
+};
+
+
 /* Step 36
  *
  * Define an ES5 class named "BankAccount" that has properties
@@ -922,7 +949,10 @@ this.discoveries=[];
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+function Animal(species, gender){
+  this.species=species;
+  this.gender=gender;
+}
 
 /**
  * Step 51
@@ -931,7 +961,10 @@ this.discoveries=[];
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
-
+function Vehicle(make,model){
+  this.make=make
+  this.model=model
+}
 
 /**
  * Step 52
@@ -942,7 +975,10 @@ this.discoveries=[];
  * value of the sides property to null.
  *
  */
+function Shape(sides){
+this.sides=null;
 
+}
 
 /**
  * Step 53
@@ -951,7 +987,10 @@ this.discoveries=[];
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-
+function Box(contents, isOpen){
+  this.contents=contents;
+  this.isOpen=false;
+}
 
 /**
  * Step 54
@@ -959,7 +998,9 @@ this.discoveries=[];
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door(isOpen){
+  isOpen=false;
+}
 
 /**
  * Step 55
