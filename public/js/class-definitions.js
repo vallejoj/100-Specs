@@ -401,7 +401,17 @@ return `<ul><li>${livingOrganismClassification}</li></ul>`
  * @return {String}
  *
  */
+function favoritePlanet (planet) {
 
+ var ran= planets[Math.floor(Math.random() * planets.length)]
+ if (planets.indexOf(planet)=== -1) {
+   return (planet + " is not a planet!")
+ }if(planets.indexOf(planet)>-1){
+    console.log(planet)
+   return `I'm from ${planet}, but I wish I could go to ${ran}.`
+
+ }
+}
 
 /* Step 27
  *
